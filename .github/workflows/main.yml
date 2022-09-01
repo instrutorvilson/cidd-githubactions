@@ -13,7 +13,7 @@ jobs:
      runs-on: ubuntu-latest
      environment:
        name: developer
-     needs: deploy-homolog  
+     needs: build 
      steps:
       - name: developer
         run: echo analisando feature
