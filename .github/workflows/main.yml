@@ -33,10 +33,12 @@ jobs:
      environment:
        name: homolog
        url: 'http://www.google.com'
-     needs: deploy-dev  
+     needs: deploy-testes
      steps:
-      - name: testes
-        run: echo testando codigo....
+      - name: recebendo artefatos
+        run: echo testando artefatos....        
+      - name: homologano.. 
+        run: echo liberando artafato para produção
   
   deploy-producao:
      runs-on: ubuntu-latest
