@@ -8,11 +8,21 @@ jobs:
      steps:
       - name: Build
         run: echo construindo aplicação
+  
   deploy-dev:
      runs-on: ubuntu-latest
      environment:
        name: developer
-     needs: build  
+     needs: deploy-homolog  
+     steps:
+      - name: developer
+        run: echo analisando feature
+        
+  deploy-homolog:
+     runs-on: ubuntu-latest
+     environment:
+       name: developer
+     needs: deploy-dev  
      steps:
       - name: developer
         run: echo analisando feature
