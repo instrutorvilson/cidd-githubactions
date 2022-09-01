@@ -12,6 +12,7 @@ jobs:
      runs-on: ubuntu-latest
      environment:
        name: developer
+     needs: build  
      steps:
       - name: developer
         run: echo analisando feature
